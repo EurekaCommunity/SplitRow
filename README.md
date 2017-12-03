@@ -15,13 +15,6 @@ By [MANDELKIND](http://mandelkind.swiss).
  * [Usage](#usage)
  * [Requirements](#requirements)
  * [Getting involved](#getting-involved)
- * [Examples](#examples)
- * [Installation](#installation)
- * [Customization](#customization)
- 	* [GenericPasswordRow parameters](#genericpasswordrow-parameters)
- 	* [Creating custom nib file](#creating-custom-nib-file)
- 	* [Implement custom validation](#custom-password-validation)
- * [Roadmap](#roadmap)
 
 ## Introduction
 
@@ -67,7 +60,6 @@ class ViewController: FormViewController {
 
 * If you **want to contribute** please feel free to **submit pull requests**.
 * If you **have a feature request** please **open an issue**.
-* If you **found a bug** or **need help** please **check older issues, [FAQ](#faq) and threads on [StackOverflow](http://stackoverflow.com/questions/tagged/CreditCardRow) (Tag 'CreditCardRow') before submitting an issue.**.
 
 ## Author
 
