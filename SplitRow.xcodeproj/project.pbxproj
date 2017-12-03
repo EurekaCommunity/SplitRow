@@ -39,6 +39,7 @@
 		79B5CB421FD4767500983E52 /* SplitRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowCell.swift; sourceTree = "<group>"; };
 		79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowCellTableView.swift; sourceTree = "<group>"; };
 		79B5CB491FD47B8B00983E52 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
+		79B5CB4D1FD4806D00983E52 /* SplitRow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SplitRow.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		79B5CB1C1FD4756500983E52 = {
 			isa = PBXGroup;
 			children = (
+				79B5CB4C1FD4805000983E52 /* Media */,
 				79B5CB281FD4756500983E52 /* SplitRow */,
 				79B5CB331FD4756500983E52 /* SplitRowTests */,
 				79B5CB271FD4756500983E52 /* Products */,
@@ -108,6 +110,14 @@
 				79B5CB491FD47B8B00983E52 /* Eureka.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79B5CB4C1FD4805000983E52 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				79B5CB4D1FD4806D00983E52 /* SplitRow.jpg */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
