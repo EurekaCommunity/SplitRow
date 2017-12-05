@@ -64,4 +64,51 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .width, relatedBy: .equal, toItem: contentView, attribute: .width, multiplier: row.rowLeftPercentage, constant: 1.0))
 		contentView.addConstraint(NSLayoutConstraint(item: tableViewRight, attribute: .width, relatedBy: .equal, toItem: contentView, attribute: .width, multiplier: row.rowRightPercentage, constant: 1.0))
 	}
+	
+	private func rowCanBecomeFirstResponder(_ row: BaseRow?) -> Bool{
+		guard let row = row else{ return false }
+		return false == row.isDisabled && row.baseCell?.cellCanBecomeFirstResponder() ?? false
+	}
+	
+	open override func cellCanBecomeFirstResponder() -> Bool{
+		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		guard false == row.isDisabled else{ return false }
+		
+		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
+		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
+		
+		if rowLeftFirstResponder == nil && rowRightFirstResponder == nil{
+			return rowCanBecomeFirstResponder(row.rowLeft) || rowCanBecomeFirstResponder(row.rowRight)
+			
+		} else if rowRightFirstResponder == nil{
+			return rowCanBecomeFirstResponder(row.rowLeft)
+			
+		} else if rowLeftFirstResponder == nil{
+			return rowCanBecomeFirstResponder(row.rowRight)
+		}
+		
+		return false
+	}
+	
+	open override func cellBecomeFirstResponder(withDirection: Direction) -> Bool {
+		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		
+		if withDirection == .up, rowCanBecomeFirstResponder(row.rowLeft){
+			return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+		
+		} else if withDirection == .down, rowCanBecomeFirstResponder(row.rowRight){
+			return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+		}
+		
+		return false
+	}
+	
+	open override func cellResignFirstResponder() -> Bool{
+		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		
+		let rowLeftResignFirstResponder = row.rowLeft?.cell?.cellResignFirstResponder() ?? false
+		let rowRightResignFirstResponder = row.rowRight?.cell?.cellResignFirstResponder() ?? false
+		
+		return rowLeftResignFirstResponder && rowRightResignFirstResponder
+	}
 }
