@@ -58,6 +58,11 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		tableViewRight.update()
 	}
 	
+	open override func didSelect(){
+		guard let indexPath = self.row?.indexPath else{ return }
+		formViewController()?.tableView?.scrollToRow(at: indexPath, at: .bottom, animated: true)
+	}
+	
 	private func setupConstraints(){
 		guard let row = self.row as? SplitRow<L,R> else{ return }
 		
