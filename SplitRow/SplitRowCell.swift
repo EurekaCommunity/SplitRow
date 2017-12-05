@@ -119,7 +119,9 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		}
 		
 		if becameFirstResponder, let indexPath = self.row.indexPath{
-			formViewController()?.tableView?.scrollToRow(at: indexPath, at: .bottom, animated: true)
+			DispatchQueue.main.async{ [weak self] in
+				self?.formViewController()?.tableView?.scrollToRow(at: indexPath, at: .bottom, animated: true)
+			}
 		}
 		
 		return becameFirstResponder
