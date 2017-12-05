@@ -70,6 +70,15 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		return false == row.isDisabled && row.baseCell?.cellCanBecomeFirstResponder() ?? false
 	}
 	
+	open override var isFirstResponder: Bool{
+		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		
+		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
+		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
+		
+		return rowLeftFirstResponder != nil || rowRightFirstResponder != nil
+	}
+	
 	open override func cellCanBecomeFirstResponder() -> Bool{
 		guard let row = self.row as? SplitRow<L,R> else{ return false }
 		guard false == row.isDisabled else{ return false }
