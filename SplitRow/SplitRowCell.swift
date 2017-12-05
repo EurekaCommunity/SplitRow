@@ -58,13 +58,6 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		tableViewRight.update()
 	}
 	
-	open override func didSelect() {
-		guard let indexPath = row.indexPath else{ return }
-		UIView.beginAnimations(nil, context: nil)
-		formViewController()?.tableView?.scrollToRow(at: indexPath, at: .none, animated: true)
-		UIView.commitAnimations()
-	}
-	
 	private func setupConstraints(){
 		guard let row = self.row as? SplitRow<L,R> else{ return }
 		
@@ -75,6 +68,15 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 	private func rowCanBecomeFirstResponder(_ row: BaseRow?) -> Bool{
 		guard let row = row else{ return false }
 		return false == row.isDisabled && row.baseCell?.cellCanBecomeFirstResponder() ?? false
+	}
+	
+	open override var isFirstResponder: Bool{
+		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		
+		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
+		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
+		
+		return rowLeftFirstResponder != nil || rowRightFirstResponder != nil
 	}
 	
 	open override func cellCanBecomeFirstResponder() -> Bool{
