@@ -79,11 +79,11 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		
 		if rowLeftFirstResponder == nil && rowRightFirstResponder == nil{
 			return rowCanBecomeFirstResponder(row.rowLeft) || rowCanBecomeFirstResponder(row.rowRight)
-			
-		} else if rowRightFirstResponder == nil{
+		
+		} else if rowLeftFirstResponder == nil{
 			return rowCanBecomeFirstResponder(row.rowLeft)
 			
-		} else if rowLeftFirstResponder == nil{
+		} else if rowRightFirstResponder == nil{
 			return rowCanBecomeFirstResponder(row.rowRight)
 		}
 		
