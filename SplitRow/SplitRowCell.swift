@@ -58,6 +58,11 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		tableViewRight.update()
 	}
 	
+	open override func didSelect() {
+		super.didSelect()
+		print("didSelect")
+	}
+	
 	private func setupConstraints(){
 		guard let row = self.row as? SplitRow<L,R> else{ return }
 		
@@ -119,8 +124,9 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		}
 		
 		if becameFirstResponder, let indexPath = self.row.indexPath{
+			print("dispatch.scroll")
 			DispatchQueue.main.async{ [weak self] in
-				self?.formViewController()?.tableView?.scrollToRow(at: indexPath, at: .bottom, animated: true)
+				self?.formViewController()?.tableView?.scrollToRow(at: indexPath, at: .none, animated: true)
 			}
 		}
 		
