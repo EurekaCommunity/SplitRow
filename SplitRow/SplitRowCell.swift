@@ -58,11 +58,6 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		tableViewRight.update()
 	}
 	
-	open override func didSelect(){
-		guard let indexPath = self.row?.indexPath else{ return }
-		formViewController()?.tableView?.scrollToRow(at: indexPath, at: .bottom, animated: true)
-	}
-	
 	private func setupConstraints(){
 		guard let row = self.row as? SplitRow<L,R> else{ return }
 		
@@ -104,24 +99,30 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
 		let rowRightCanBecomeFirstResponder = rowCanBecomeFirstResponder(row.rowRight)
 		
+		var becameFirstResponder = false
+		
 		if withDirection == .down{
 			if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
-				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				becameFirstResponder = row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 				
 			} else if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
-				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				becameFirstResponder = row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 			}
 			
 		} else if withDirection == .up{
 			if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
-				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				becameFirstResponder = row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 				
 			} else if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
-				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				becameFirstResponder = row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 			}
 		}
 		
-		return false
+		if becameFirstResponder, let indexPath = self.row.indexPath{
+			formViewController()?.tableView?.scrollToRow(at: indexPath, at: .bottom, animated: true)
+		}
+		
+		return becameFirstResponder
 	}
 	
 	open override func cellResignFirstResponder() -> Bool{
