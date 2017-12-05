@@ -93,11 +93,27 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 	open override func cellBecomeFirstResponder(withDirection: Direction) -> Bool {
 		guard let row = self.row as? SplitRow<L,R> else{ return false }
 		
-		if withDirection == .up, rowCanBecomeFirstResponder(row.rowLeft){
-			return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
+		let rowLeftCanBecomeFirstResponder = rowCanBecomeFirstResponder(row.rowLeft)
 		
-		} else if withDirection == .down, rowCanBecomeFirstResponder(row.rowRight){
-			return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
+		let rowRightCanBecomeFirstResponder = rowCanBecomeFirstResponder(row.rowRight)
+		
+		if withDirection == .down{
+			if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
+				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				
+			} else if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
+				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+			}
+			
+		} else if withDirection == .up{
+			if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
+				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				
+			} else if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
+				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+			}
 		}
 		
 		return false
