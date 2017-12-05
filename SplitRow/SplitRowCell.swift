@@ -59,8 +59,10 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 	}
 	
 	open override func didSelect() {
-		super.didSelect()
-		print("didSelect")
+		guard let indexPath = row.indexPath else{ return }
+		UIView.beginAnimations(nil, context: nil)
+		formViewController()?.tableView?.scrollToRow(at: indexPath, at: .none, animated: true)
+		UIView.commitAnimations()
 	}
 	
 	private func setupConstraints(){
@@ -104,33 +106,24 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R
 		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
 		let rowRightCanBecomeFirstResponder = rowCanBecomeFirstResponder(row.rowRight)
 		
-		var becameFirstResponder = false
-		
 		if withDirection == .down{
 			if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
-				becameFirstResponder = row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 				
 			} else if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
-				becameFirstResponder = row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 			}
 			
 		} else if withDirection == .up{
 			if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
-				becameFirstResponder = row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 				
 			} else if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
-				becameFirstResponder = row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 			}
 		}
 		
-		if becameFirstResponder, let indexPath = self.row.indexPath{
-			print("dispatch.scroll")
-			DispatchQueue.main.async{ [weak self] in
-				self?.formViewController()?.tableView?.scrollToRow(at: indexPath, at: .none, animated: true)
-			}
-		}
-		
-		return becameFirstResponder
+		return false
 	}
 	
 	open override func cellResignFirstResponder() -> Bool{
