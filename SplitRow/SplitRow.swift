@@ -30,7 +30,7 @@ public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, Row
 	public override var value: SplitRowValue<L.Cell.Value, R.Cell.Value>?{
 		get{ return super.value }
 		set{
-			var wasChanged = false
+			var wasChanged = super.value?.left != newValue?.left || super.value?.right != newValue?.right
 			
 			if self.rowLeft?.value != newValue?.left{
 				self.rowLeft?.value = newValue?.left
