@@ -11,13 +11,41 @@ import Eureka
 public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, RowType where L: BaseRow, R: BaseRow{
 	
 	public override var section: Section?{
+		get{ return super.section }
 		set{
 			rowLeft?.section = newValue
 			rowRight?.section = newValue
 			
 			super.section = newValue
 		}
-		get{ return super.section }
+	}
+	
+	public override func updateCell(){
+		super.updateCell()
+		
+		self.rowLeft?.updateCell()
+		self.rowRight?.updateCell()
+	}
+	
+	public override var value: SplitRowValue<L.Cell.Value, R.Cell.Value>?{
+		get{ return super.value }
+		set{
+			var wasChanged = false
+			
+			if self.rowLeft?.value != newValue?.left{
+				self.rowLeft?.value = newValue?.left
+				wasChanged = true
+			}
+			
+			if self.rowRight?.value != newValue?.right{
+				self.rowRight?.value = newValue?.right
+				wasChanged = true
+			}
+			
+			if wasChanged{
+				super.value = newValue
+			}
+		}
 	}
 	
 	private enum Side{
