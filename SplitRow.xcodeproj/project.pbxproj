@@ -11,7 +11,7 @@
 		79B5CB351FD4756500983E52 /* SplitRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB341FD4756500983E52 /* SplitRowTests.swift */; };
 		79B5CB371FD4756500983E52 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79B5CB441FD4767600983E52 /* SplitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB401FD4767500983E52 /* SplitRow.swift */; };
-		79B5CB451FD4767600983E52 /* SplitValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB411FD4767500983E52 /* SplitValues.swift */; };
+		79B5CB451FD4767600983E52 /* SplitRowValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB411FD4767500983E52 /* SplitRowValue.swift */; };
 		79B5CB461FD4767600983E52 /* SplitRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB421FD4767500983E52 /* SplitRowCell.swift */; };
 		79B5CB471FD4767600983E52 /* SplitRowCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */; };
 		79B5CB4B1FD47E5500983E52 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB491FD47B8B00983E52 /* Eureka.framework */; };
@@ -35,7 +35,7 @@
 		79B5CB341FD4756500983E52 /* SplitRowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitRowTests.swift; sourceTree = "<group>"; };
 		79B5CB361FD4756500983E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79B5CB401FD4767500983E52 /* SplitRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRow.swift; sourceTree = "<group>"; };
-		79B5CB411FD4767500983E52 /* SplitValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitValues.swift; sourceTree = "<group>"; };
+		79B5CB411FD4767500983E52 /* SplitRowValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowValue.swift; sourceTree = "<group>"; };
 		79B5CB421FD4767500983E52 /* SplitRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowCell.swift; sourceTree = "<group>"; };
 		79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowCellTableView.swift; sourceTree = "<group>"; };
 		79B5CB491FD47B8B00983E52 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				79B5CB401FD4767500983E52 /* SplitRow.swift */,
 				79B5CB421FD4767500983E52 /* SplitRowCell.swift */,
 				79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */,
-				79B5CB411FD4767500983E52 /* SplitValues.swift */,
+				79B5CB411FD4767500983E52 /* SplitRowValue.swift */,
 				79B5CB291FD4756500983E52 /* SplitRow.h */,
 				79B5CB2A1FD4756500983E52 /* Info.plist */,
 			);
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79B5CB451FD4767600983E52 /* SplitValues.swift in Sources */,
+				79B5CB451FD4767600983E52 /* SplitRowValue.swift in Sources */,
 				79B5CB471FD4767600983E52 /* SplitRowCellTableView.swift in Sources */,
 				79B5CB461FD4767600983E52 /* SplitRowCell.swift in Sources */,
 				79B5CB441FD4767600983E52 /* SplitRow.swift in Sources */,

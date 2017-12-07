@@ -42,18 +42,18 @@ public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, Row
 			guard let this = self else{ return }
 			this.cell?.update() //TODO: This should only be done on cells which need an update. e.g. PushRow etc.
 			
-			var values = SplitValues<L.Cell.Value,R.Cell.Value>()
+			var value = SplitRowValue<L.Cell.Value,R.Cell.Value>()
 			
 			if side == .left{
-				values.left = $0.value as? L.Cell.Value
-				values.right = this.value?.right
+				value.left = $0.value as? L.Cell.Value
+				value.right = this.value?.right
 				
 			} else if side == .right{
-				values.right = $0.value as? R.Cell.Value
-				values.left = this.value?.left
+				value.right = $0.value as? R.Cell.Value
+				value.left = this.value?.left
 			}
 			
-			this.value = values
+			this.value = value
 		}
 	}
 }

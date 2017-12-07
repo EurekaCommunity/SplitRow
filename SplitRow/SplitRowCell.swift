@@ -8,7 +8,7 @@
 
 import Eureka
 
-open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitValues<L.Cell.Value,R.Cell.Value>>, CellType where L: BaseRow, R: BaseRow{
+open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value,R.Cell.Value>>, CellType where L: BaseRow, R: BaseRow{
 	var tableViewLeft: SplitRowCellTableView<L>!
 	var tableViewRight: SplitRowCellTableView<R>!
 	
