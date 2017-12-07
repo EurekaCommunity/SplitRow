@@ -24,7 +24,10 @@ public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, Row
 		super.updateCell()
 		
 		self.rowLeft?.updateCell()
+		self.rowLeft?.cell?.selectionStyle = .none
+		
 		self.rowRight?.updateCell()
+		self.rowRight?.cell?.selectionStyle = .none
 	}
 	
 	public override var value: SplitRowValue<L.Cell.Value, R.Cell.Value>?{
