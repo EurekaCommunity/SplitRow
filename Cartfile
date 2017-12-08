@@ -1,1 +1,2 @@
 github "Mandelkind/Eureka" "SplitRow"
+github "EurekaCommunity/PostalAddressRow" ~> 1.0

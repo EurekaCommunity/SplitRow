@@ -26,12 +26,10 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		tableViewRight.translatesAutoresizingMaskIntoConstraints = false
 		
 		contentView.addSubview(tableViewLeft)
-		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[tableViewLeft]|", options: [], metrics: nil, views: ["tableViewLeft": tableViewLeft]))
-		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[tableViewLeft]", options: [], metrics: nil, views: ["tableViewLeft": tableViewLeft]))
+		contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1.0, constant: 0.0))
 		
 		contentView.addSubview(tableViewRight)
-		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[tableViewRight]|", options: [], metrics: nil, views: ["tableViewRight": tableViewRight]))
-		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[tableViewRight]|", options: [], metrics: nil, views: ["tableViewRight": tableViewRight]))
+		contentView.addConstraint(NSLayoutConstraint(item: tableViewRight, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1.0, constant: 0.0))
 	}
 	
 	required public init?(coder aDecoder: NSCoder) {
@@ -40,16 +38,27 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	
 	open override func setup(){
 		selectionStyle = .none
-		setupConstraints()
 		
 		//ignore Xcode Cast warning here, it works!
 		guard let row = self.row as? SplitRow<L,R> else{ return }
 		
+		//TODO: If we use UITableViewAutomaticDimension instead of 44.0 we encounter constraint errors :(
+		let maxRowHeight = max(row.rowLeft?.cell?.height?() ?? 44.0, row.rowRight?.cell?.height?() ?? 44.0)
+		if maxRowHeight != UITableViewAutomaticDimension{
+			self.height = { maxRowHeight }
+			row.rowLeft?.cell?.height = self.height
+			row.rowRight?.cell?.height = self.height
+		}
+		
 		tableViewLeft.row = row.rowLeft
+		tableViewLeft.isScrollEnabled = false
 		tableViewLeft.setup()
 		
 		tableViewRight.row = row.rowRight
+		tableViewRight.isScrollEnabled = false
 		tableViewRight.setup()
+		
+		setupConstraints()
 	}
 	
 	
@@ -61,8 +70,13 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	private func setupConstraints(){
 		guard let row = self.row as? SplitRow<L,R> else{ return }
 		
-		contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .width, relatedBy: .equal, toItem: contentView, attribute: .width, multiplier: row.rowLeftPercentage, constant: 1.0))
-		contentView.addConstraint(NSLayoutConstraint(item: tableViewRight, attribute: .width, relatedBy: .equal, toItem: contentView, attribute: .width, multiplier: row.rowRightPercentage, constant: 1.0))
+		if let height = self.height?(){
+			self.contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: height))
+			self.contentView.addConstraint(NSLayoutConstraint(item: tableViewRight, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: height))
+		}
+		
+		self.contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .width, relatedBy: .equal, toItem: contentView, attribute: .width, multiplier: row.rowLeftPercentage, constant: 0.0))
+		self.contentView.addConstraint(NSLayoutConstraint(item: tableViewRight, attribute: .width, relatedBy: .equal, toItem: contentView, attribute: .width, multiplier: row.rowRightPercentage, constant: 0.0))
 	}
 	
 	private func rowCanBecomeFirstResponder(_ row: BaseRow?) -> Bool{

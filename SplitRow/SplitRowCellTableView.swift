@@ -88,13 +88,13 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 			let separatorView = UIView()
 			separatorView.backgroundColor = .groupTableViewBackground
 			separatorView.translatesAutoresizingMaskIntoConstraints = false
-			
+
 			cell.addSubview(separatorView)
 			cell.bringSubview(toFront: separatorView)
 			
 			cell.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[separatorView(1)]", options: [], metrics: nil, views: ["separatorView":separatorView]))
-			cell.addConstraint(NSLayoutConstraint(item: separatorView, attribute: .bottom, relatedBy: .equal, toItem: cell, attribute: .bottom, multiplier: 1.0, constant: 0))
-			cell.addConstraint(NSLayoutConstraint(item: separatorView, attribute: .height, relatedBy: .equal, toItem: cell, attribute: .height, multiplier: 0.9, constant: 0))
+			cell.addConstraint(NSLayoutConstraint(item: separatorView, attribute: .top, relatedBy: .equal, toItem: cell, attribute: .top, multiplier: 1.0, constant: 11.0))
+			cell.addConstraint(NSLayoutConstraint(item: separatorView, attribute: .bottom, relatedBy: .equal, toItem: cell, attribute: .bottom, multiplier: 1.0, constant: -11.0))
 		}
 		
 		return row.baseCell

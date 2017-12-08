@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		797710781FDAD27100917866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710771FDAD27100917866 /* AppDelegate.swift */; };
+		7977107A1FDAD27100917866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710791FDAD27100917866 /* ViewController.swift */; };
+		7977107D1FDAD27100917866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7977107B1FDAD27100917866 /* Main.storyboard */; };
+		7977107F1FDAD27100917866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7977107E1FDAD27100917866 /* Assets.xcassets */; };
+		797710821FDAD27100917866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797710801FDAD27100917866 /* LaunchScreen.storyboard */; };
+		797710871FDAD28300917866 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB491FD47B8B00983E52 /* Eureka.framework */; };
+		797710881FDAD28300917866 /* PostalAddressRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7977106F1FDAD24A00917866 /* PostalAddressRow.framework */; };
 		79B5CB301FD4756500983E52 /* SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB261FD4756500983E52 /* SplitRow.framework */; };
 		79B5CB351FD4756500983E52 /* SplitRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB341FD4756500983E52 /* SplitRowTests.swift */; };
 		79B5CB371FD4756500983E52 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7977108A1FDAD30900917866 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79B5CB1D1FD4756500983E52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79B5CB251FD4756500983E52;
+			remoteInfo = SplitRow;
+		};
 		79B5CB311FD4756500983E52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79B5CB1D1FD4756500983E52 /* Project object */;
@@ -28,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7977106F1FDAD24A00917866 /* PostalAddressRow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PostalAddressRow.framework; path = Carthage/Build/iOS/PostalAddressRow.framework; sourceTree = "<group>"; };
+		797710751FDAD27100917866 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		797710771FDAD27100917866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		797710791FDAD27100917866 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7977107C1FDAD27100917866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7977107E1FDAD27100917866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		797710811FDAD27100917866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		797710831FDAD27100917866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79B5CB261FD4756500983E52 /* SplitRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplitRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B5CB291FD4756500983E52 /* SplitRow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplitRow.h; sourceTree = "<group>"; };
 		79B5CB2A1FD4756500983E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +65,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		797710721FDAD27100917866 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				797710871FDAD28300917866 /* Eureka.framework in Frameworks */,
+				797710881FDAD28300917866 /* PostalAddressRow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B5CB221FD4756500983E52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,9 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		797710761FDAD27100917866 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				797710771FDAD27100917866 /* AppDelegate.swift */,
+				797710791FDAD27100917866 /* ViewController.swift */,
+				7977107B1FDAD27100917866 /* Main.storyboard */,
+				7977107E1FDAD27100917866 /* Assets.xcassets */,
+				797710801FDAD27100917866 /* LaunchScreen.storyboard */,
+				797710831FDAD27100917866 /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		79B5CB1C1FD4756500983E52 = {
 			isa = PBXGroup;
 			children = (
+				797710761FDAD27100917866 /* Example */,
 				79B5CB4C1FD4805000983E52 /* Media */,
 				79B5CB281FD4756500983E52 /* SplitRow */,
 				79B5CB331FD4756500983E52 /* SplitRowTests */,
@@ -78,6 +123,7 @@
 			children = (
 				79B5CB261FD4756500983E52 /* SplitRow.framework */,
 				79B5CB2F1FD4756500983E52 /* SplitRowTests.xctest */,
+				797710751FDAD27100917866 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +153,7 @@
 		79B5CB481FD47B8A00983E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7977106F1FDAD24A00917866 /* PostalAddressRow.framework */,
 				79B5CB491FD47B8B00983E52 /* Eureka.framework */,
 			);
 			name = Frameworks;
@@ -134,6 +181,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		797710741FDAD27100917866 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 797710841FDAD27100917866 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				797710711FDAD27100917866 /* Sources */,
+				797710721FDAD27100917866 /* Frameworks */,
+				797710731FDAD27100917866 /* Resources */,
+				797710891FDAD28A00917866 /* Copy Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7977108B1FDAD30900917866 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = 797710751FDAD27100917866 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		79B5CB251FD4756500983E52 /* SplitRow */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79B5CB3A1FD4756500983E52 /* Build configuration list for PBXNativeTarget "SplitRow" */;
@@ -176,10 +242,14 @@
 		79B5CB1D1FD4756500983E52 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = MANDELKIND;
 				TargetAttributes = {
+					797710741FDAD27100917866 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					79B5CB251FD4756500983E52 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0910;
@@ -197,6 +267,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 79B5CB1C1FD4756500983E52;
 			productRefGroup = 79B5CB271FD4756500983E52 /* Products */;
@@ -205,11 +276,22 @@
 			targets = (
 				79B5CB251FD4756500983E52 /* SplitRow */,
 				79B5CB2E1FD4756500983E52 /* SplitRowTests */,
+				797710741FDAD27100917866 /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		797710731FDAD27100917866 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				797710821FDAD27100917866 /* LaunchScreen.storyboard in Resources */,
+				7977107F1FDAD27100917866 /* Assets.xcassets in Resources */,
+				7977107D1FDAD27100917866 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B5CB241FD4756500983E52 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,7 +308,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		797710891FDAD28A00917866 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PostalAddressRow.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Eureka.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PostalAddressRow.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		797710711FDAD27100917866 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7977107A1FDAD27100917866 /* ViewController.swift in Sources */,
+				797710781FDAD27100917866 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B5CB211FD4756500983E52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +361,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7977108B1FDAD30900917866 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79B5CB251FD4756500983E52 /* SplitRow */;
+			targetProxy = 7977108A1FDAD30900917866 /* PBXContainerItemProxy */;
+		};
 		79B5CB321FD4756500983E52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 79B5CB251FD4756500983E52 /* SplitRow */;
@@ -256,7 +373,62 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		7977107B1FDAD27100917866 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7977107C1FDAD27100917866 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		797710801FDAD27100917866 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				797710811FDAD27100917866 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		797710851FDAD27100917866 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		797710861FDAD27100917866 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		79B5CB381FD4756500983E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -456,6 +628,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		797710841FDAD27100917866 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				797710851FDAD27100917866 /* Debug */,
+				797710861FDAD27100917866 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79B5CB201FD4756500983E52 /* Build configuration list for PBXProject "SplitRow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
