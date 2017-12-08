@@ -13,7 +13,6 @@
 		7977107F1FDAD27100917866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7977107E1FDAD27100917866 /* Assets.xcassets */; };
 		797710821FDAD27100917866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797710801FDAD27100917866 /* LaunchScreen.storyboard */; };
 		797710871FDAD28300917866 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB491FD47B8B00983E52 /* Eureka.framework */; };
-		797710881FDAD28300917866 /* PostalAddressRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7977106F1FDAD24A00917866 /* PostalAddressRow.framework */; };
 		79B5CB301FD4756500983E52 /* SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB261FD4756500983E52 /* SplitRow.framework */; };
 		79B5CB351FD4756500983E52 /* SplitRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB341FD4756500983E52 /* SplitRowTests.swift */; };
 		79B5CB371FD4756500983E52 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,7 +69,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				797710871FDAD28300917866 /* Eureka.framework in Frameworks */,
-				797710881FDAD28300917866 /* PostalAddressRow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,12 +314,10 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PostalAddressRow.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Eureka.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PostalAddressRow.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

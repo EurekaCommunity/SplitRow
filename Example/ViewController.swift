@@ -8,7 +8,6 @@
 
 import Eureka
 import SplitRow
-import PostalAddressRow
 
 class ViewController: FormViewController{
 
@@ -61,21 +60,6 @@ class ViewController: FormViewController{
 				}
 		}
 		
-		form +++ Section("Address")
-			<<< SplitRow<PushRow<String>,PostalAddressRow>(){
-				$0.rowLeft = PushRow<String>(){
-					$0.options = ["work","private","other"]
-				}
-				
-				$0.rowRight = PostalAddressRow(){
-					$0.streetPlaceholder = "Street"
-					$0.statePlaceholder = "State"
-					$0.cityPlaceholder = "City"
-					$0.postalCodePlaceholder = "ZIP"
-					$0.countryPlaceholder = "Country"
-				}
-			}
-		
 		form +++ MultivaluedSection(multivaluedOptions: [.Insert,.Delete,.Reorder], header: "URLs", footer: ""){
 			$0.multivaluedRowToInsertAt = { _ in
 				return SplitRow<PushRow<String>,URLRow>(){
@@ -92,27 +76,6 @@ class ViewController: FormViewController{
 					}
 				}
 			}
-			guard let row = $0.multivaluedRowToInsertAt?(0) else{ return }
-			$0 <<< row
-		}
-		
-		form +++ MultivaluedSection(multivaluedOptions: [.Insert,.Delete,.Reorder], header: "Addresses", footer: ""){
-			$0.multivaluedRowToInsertAt = { _ in
-				return SplitRow<PushRow<String>,PostalAddressRow>(){
-					$0.rowLeft = PushRow<String>(){
-						$0.options = ["work","private","other"]
-					}
-					
-					$0.rowRight = PostalAddressRow(){
-						$0.streetPlaceholder = "Street"
-						$0.statePlaceholder = "State"
-						$0.cityPlaceholder = "City"
-						$0.postalCodePlaceholder = "ZIP"
-						$0.countryPlaceholder = "Country"
-					}
-				}
-			}
-			
 			guard let row = $0.multivaluedRowToInsertAt?(0) else{ return }
 			$0 <<< row
 		}
