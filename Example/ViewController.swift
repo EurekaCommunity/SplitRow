@@ -27,7 +27,13 @@ class ViewController: FormViewController{
 				}.cellUpdate{ cell, row in
 					cell.textField?.clearButtonMode = .whileEditing
 					cell.textField?.textAlignment = .right
+					
+				}.onCellHighlightChanged{ _, row in
+					print("onCellHighlightChanged:",row.isHighlighted,"wasChanged:",row.wasChanged)
 				}
+				
+			}.onChange{ row in
+				print("valueChanged:",row.valueChanged)
 		}
 		
 		form +++ Section("E-Mail")
