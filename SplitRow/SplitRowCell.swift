@@ -40,7 +40,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		selectionStyle = .none
 		
 		//ignore Xcode Cast warning here, it works!
-		guard let row = self.row as? SplitRow<L,R> else{ return }
+		guard let row = self.row as? _SplitRow<L,R> else{ return }
 		
 		//TODO: If we use UITableViewAutomaticDimension instead of 44.0 we encounter constraint errors :(
 		let maxRowHeight = max(row.rowLeft?.cell?.height?() ?? 44.0, row.rowRight?.cell?.height?() ?? 44.0)
@@ -68,7 +68,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	}
 	
 	private func setupConstraints(){
-		guard let row = self.row as? SplitRow<L,R> else{ return }
+		guard let row = self.row as? _SplitRow<L,R> else{ return }
 		
 		if let height = self.height?(){
 			self.contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: height))
@@ -85,7 +85,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	}
 	
 	open override var isFirstResponder: Bool{
-		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		guard let row = self.row as? _SplitRow<L,R> else{ return false }
 		
 		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
 		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
@@ -94,7 +94,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	}
 	
 	open override func cellCanBecomeFirstResponder() -> Bool{
-		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		guard let row = self.row as? _SplitRow<L,R> else{ return false }
 		guard false == row.isDisabled else{ return false }
 		
 		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
@@ -114,7 +114,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	}
 	
 	open override func cellBecomeFirstResponder(withDirection: Direction) -> Bool {
-		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		guard let row = self.row as? _SplitRow<L,R> else{ return false }
 		
 		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
 		let rowLeftCanBecomeFirstResponder = rowCanBecomeFirstResponder(row.rowLeft)
@@ -143,7 +143,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	}
 	
 	open override func cellResignFirstResponder() -> Bool{
-		guard let row = self.row as? SplitRow<L,R> else{ return false }
+		guard let row = self.row as? _SplitRow<L,R> else{ return false }
 		
 		let rowLeftResignFirstResponder = row.rowLeft?.cell?.cellResignFirstResponder() ?? false
 		let rowRightResignFirstResponder = row.rowRight?.cell?.cellResignFirstResponder() ?? false
