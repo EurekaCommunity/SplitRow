@@ -8,9 +8,9 @@
 
 import Eureka
 
-public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, RowType where L: BaseRow, R: BaseRow{
+open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: BaseRow, R: BaseRow{
 	
-	public override var section: Section?{
+	open override var section: Section?{
 		get{ return super.section }
 		set{
 			rowLeft?.section = newValue
@@ -20,7 +20,7 @@ public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, Row
 		}
 	}
 	
-	public override func updateCell(){
+	open override func updateCell(){
 		super.updateCell()
 		
 		self.rowLeft?.updateCell()
@@ -32,7 +32,7 @@ public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, Row
 	
 	private(set) public var valueChanged = Set<SplitRowTag>()
 	
-	public override var value: SplitRowValue<L.Cell.Value, R.Cell.Value>?{
+	open override var value: SplitRowValue<L.Cell.Value, R.Cell.Value>?{
 		get{ return super.value }
 		set{
 			valueChanged = []
@@ -89,7 +89,7 @@ public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, Row
 		cellProvider = CellProvider<SplitRowCell<L,R>>()
 	}
 	
-	private func subscribe<T: RowType>(onChange row: T) where T: BaseRow{
+	open func subscribe<T: RowType>(onChange row: T) where T: BaseRow{
 		row.onChange{ [weak self] row in
 			guard let strongSelf = self, let rowTagString = row.tag, let rowTag = SplitRowTag(rawValue: rowTagString) else{ return }
 			strongSelf.cell?.update()  //TODO: This should only be done on cells which need an update. e.g. PushRow etc.
@@ -107,3 +107,5 @@ public final class SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>>, Row
 		}
 	}
 }
+
+public final class SplitRow<L: RowType, R: RowType>: _SplitRow<L,R>, RowType where L: BaseRow, R: BaseRow{}
