@@ -1,1 +1,1 @@
-github "xmartlabs/Eureka" "master"
+github "xmartlabs/Eureka" ~> 4.1
