@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148193C2A89A285F9169834D /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7966D658B0381D7985F87C5 /* Pods_Example.framework */; };
+		750C064FE84DB87B0692EDD4 /* Pods_SplitRowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292265190EEB0208296B082B /* Pods_SplitRowTests.framework */; };
 		797710781FDAD27100917866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710771FDAD27100917866 /* AppDelegate.swift */; };
 		7977107A1FDAD27100917866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710791FDAD27100917866 /* ViewController.swift */; };
 		7977107D1FDAD27100917866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7977107B1FDAD27100917866 /* Main.storyboard */; };
 		7977107F1FDAD27100917866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7977107E1FDAD27100917866 /* Assets.xcassets */; };
 		797710821FDAD27100917866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797710801FDAD27100917866 /* LaunchScreen.storyboard */; };
-		797710871FDAD28300917866 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB491FD47B8B00983E52 /* Eureka.framework */; };
 		79B5CB301FD4756500983E52 /* SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB261FD4756500983E52 /* SplitRow.framework */; };
 		79B5CB351FD4756500983E52 /* SplitRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB341FD4756500983E52 /* SplitRowTests.swift */; };
 		79B5CB371FD4756500983E52 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,7 +21,7 @@
 		79B5CB451FD4767600983E52 /* SplitRowValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB411FD4767500983E52 /* SplitRowValue.swift */; };
 		79B5CB461FD4767600983E52 /* SplitRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB421FD4767500983E52 /* SplitRowCell.swift */; };
 		79B5CB471FD4767600983E52 /* SplitRowCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */; };
-		79B5CB4B1FD47E5500983E52 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB491FD47B8B00983E52 /* Eureka.framework */; };
+		BDC9F92D66E1A76152FD65CC /* Pods_SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7977106F1FDAD24A00917866 /* PostalAddressRow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PostalAddressRow.framework; path = Carthage/Build/iOS/PostalAddressRow.framework; sourceTree = "<group>"; };
+		27EDCC01E695BE759AD2A92D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		292265190EEB0208296B082B /* Pods_SplitRowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitRowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRow/Pods-SplitRow.debug.xcconfig"; sourceTree = "<group>"; };
+		638FAE23CE9EA43635267CD7 /* Pods-SplitRowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78FD8B9122FB971CCD8CAD80 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		797710751FDAD27100917866 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797710771FDAD27100917866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		797710791FDAD27100917866 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,8 +64,11 @@
 		79B5CB411FD4767500983E52 /* SplitRowValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowValue.swift; sourceTree = "<group>"; };
 		79B5CB421FD4767500983E52 /* SplitRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowCell.swift; sourceTree = "<group>"; };
 		79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowCellTableView.swift; sourceTree = "<group>"; };
-		79B5CB491FD47B8B00983E52 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		79B5CB4D1FD4806D00983E52 /* SplitRow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SplitRow.jpg; sourceTree = "<group>"; };
+		96507E193F5205CB3720DC80 /* Pods-SplitRowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests.release.xcconfig"; sourceTree = "<group>"; };
+		B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRow.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRow/Pods-SplitRow.release.xcconfig"; sourceTree = "<group>"; };
+		B7966D658B0381D7985F87C5 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797710871FDAD28300917866 /* Eureka.framework in Frameworks */,
+				148193C2A89A285F9169834D /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79B5CB4B1FD47E5500983E52 /* Eureka.framework in Frameworks */,
+				BDC9F92D66E1A76152FD65CC /* Pods_SplitRow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +93,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				79B5CB301FD4756500983E52 /* SplitRow.framework in Frameworks */,
+				750C064FE84DB87B0692EDD4 /* Pods_SplitRowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75EA820112A1CA3BEC321D30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78FD8B9122FB971CCD8CAD80 /* Pods-Example.debug.xcconfig */,
+				27EDCC01E695BE759AD2A92D /* Pods-Example.release.xcconfig */,
+				5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */,
+				B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */,
+				638FAE23CE9EA43635267CD7 /* Pods-SplitRowTests.debug.xcconfig */,
+				96507E193F5205CB3720DC80 /* Pods-SplitRowTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		797710761FDAD27100917866 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,7 @@
 				79B5CB331FD4756500983E52 /* SplitRowTests */,
 				79B5CB271FD4756500983E52 /* Products */,
 				79B5CB481FD47B8A00983E52 /* Frameworks */,
+				75EA820112A1CA3BEC321D30 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,8 +174,9 @@
 		79B5CB481FD47B8A00983E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7977106F1FDAD24A00917866 /* PostalAddressRow.framework */,
-				79B5CB491FD47B8B00983E52 /* Eureka.framework */,
+				B7966D658B0381D7985F87C5 /* Pods_Example.framework */,
+				B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */,
+				292265190EEB0208296B082B /* Pods_SplitRowTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,10 +207,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797710841FDAD27100917866 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
+				15E179D95BFA7FABAA0192EF /* [CP] Check Pods Manifest.lock */,
 				797710711FDAD27100917866 /* Sources */,
 				797710721FDAD27100917866 /* Frameworks */,
 				797710731FDAD27100917866 /* Resources */,
 				797710891FDAD28A00917866 /* Copy Carthage Frameworks */,
+				4CA7CD32AAC86739F5BB2947 /* [CP] Embed Pods Frameworks */,
+				8B66F1106542D2A999D77448 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,10 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79B5CB3A1FD4756500983E52 /* Build configuration list for PBXNativeTarget "SplitRow" */;
 			buildPhases = (
+				0BEA14AB34CD07BA3D20DFB8 /* [CP] Check Pods Manifest.lock */,
 				79B5CB211FD4756500983E52 /* Sources */,
 				79B5CB221FD4756500983E52 /* Frameworks */,
 				79B5CB231FD4756500983E52 /* Headers */,
 				79B5CB241FD4756500983E52 /* Resources */,
+				A05E37F33023B623329F1D5F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79B5CB3D1FD4756500983E52 /* Build configuration list for PBXNativeTarget "SplitRowTests" */;
 			buildPhases = (
+				D31C86CC9D8AF6758786E20E /* [CP] Check Pods Manifest.lock */,
 				79B5CB2B1FD4756500983E52 /* Sources */,
 				79B5CB2C1FD4756500983E52 /* Frameworks */,
 				79B5CB2D1FD4756500983E52 /* Resources */,
+				0B5A0FF36D7322F28DBE6304 /* [CP] Embed Pods Frameworks */,
+				99567A7FA1D996F655E9AB01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,7 +273,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = MANDELKIND;
 				TargetAttributes = {
 					797710741FDAD27100917866 = {
@@ -307,6 +339,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B5A0FF36D7322F28DBE6304 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0BEA14AB34CD07BA3D20DFB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SplitRow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15E179D95BFA7FABAA0192EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CA7CD32AAC86739F5BB2947 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		797710891FDAD28A00917866 /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +426,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		8B66F1106542D2A999D77448 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99567A7FA1D996F655E9AB01 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A05E37F33023B623329F1D5F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitRow/Pods-SplitRow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D31C86CC9D8AF6758786E20E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SplitRowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -391,6 +558,7 @@
 /* Begin XCBuildConfiguration section */
 		797710851FDAD27100917866 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FD8B9122FB971CCD8CAD80 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -409,6 +577,7 @@
 		};
 		797710861FDAD27100917866 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27EDCC01E695BE759AD2A92D /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +608,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -446,6 +616,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -480,6 +651,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -499,6 +671,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -506,6 +679,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -532,6 +706,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -540,6 +715,7 @@
 		};
 		79B5CB3B1FD4756500983E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -567,6 +743,7 @@
 		};
 		79B5CB3C1FD4756500983E52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -593,8 +770,9 @@
 		};
 		79B5CB3E1FD4756500983E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 638FAE23CE9EA43635267CD7 /* Pods-SplitRowTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YB5VLT2EJC;
 				INFOPLIST_FILE = SplitRowTests/Info.plist;
@@ -608,8 +786,9 @@
 		};
 		79B5CB3F1FD4756500983E52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96507E193F5205CB3720DC80 /* Pods-SplitRowTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YB5VLT2EJC;
 				INFOPLIST_FILE = SplitRowTests/Info.plist;
