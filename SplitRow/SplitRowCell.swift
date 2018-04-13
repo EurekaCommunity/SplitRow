@@ -12,6 +12,11 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	var tableViewLeft: SplitRowCellTableView<L>!
 	var tableViewRight: SplitRowCellTableView<R>!
 	
+	open override var isHighlighted: Bool {
+		get { return super.isHighlighted || (tableViewLeft.row?.cell?.isHighlighted ?? false) || (tableViewRight.row?.cell?.isHighlighted ?? false) }
+		set { super.isHighlighted = newValue }
+	}
+	
 	public required init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
@@ -118,28 +123,33 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		
 		let rowLeftFirstResponder = row.rowLeft?.cell.findFirstResponder()
 		let rowLeftCanBecomeFirstResponder = rowCanBecomeFirstResponder(row.rowLeft)
+		var isFirstResponder = false
 		
 		let rowRightFirstResponder = row.rowRight?.cell?.findFirstResponder()
 		let rowRightCanBecomeFirstResponder = rowCanBecomeFirstResponder(row.rowRight)
 		
 		if withDirection == .down{
 			if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
-				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				isFirstResponder = row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 				
 			} else if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
-				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				isFirstResponder = row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 			}
 			
 		} else if withDirection == .up{
 			if rowRightFirstResponder == nil, rowRightCanBecomeFirstResponder{
-				return row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				isFirstResponder = row.rowRight?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 				
 			} else if rowLeftFirstResponder == nil, rowLeftCanBecomeFirstResponder{
-				return row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
+				isFirstResponder = row.rowLeft?.cell?.cellBecomeFirstResponder(withDirection: withDirection) ?? false
 			}
 		}
 		
-		return false
+		if isFirstResponder {
+			formViewController()?.beginEditing(of: self)
+		}
+		
+		return isFirstResponder
 	}
 	
 	open override func cellResignFirstResponder() -> Bool{
@@ -147,7 +157,12 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		
 		let rowLeftResignFirstResponder = row.rowLeft?.cell?.cellResignFirstResponder() ?? false
 		let rowRightResignFirstResponder = row.rowRight?.cell?.cellResignFirstResponder() ?? false
+		let resignedFirstResponder = rowLeftResignFirstResponder && rowRightResignFirstResponder
 		
-		return rowLeftResignFirstResponder && rowRightResignFirstResponder
+		if resignedFirstResponder {
+			formViewController()?.endEditing(of: self)
+		}
+		
+		return resignedFirstResponder
 	}
 }
