@@ -68,6 +68,7 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 			newValue?.tag = SplitRowTag.left.rawValue
 			guard let row = newValue else{ return }
 			subscribe(onChange: row)
+			subscribe(onCellHighlightChanged: row)
 		}
 	}
 	public var rowLeftPercentage: CGFloat = 0.3
@@ -77,6 +78,7 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 			newValue?.tag = SplitRowTag.right.rawValue
 			guard let row = newValue else{ return }
 			subscribe(onChange: row)
+			subscribe(onCellHighlightChanged: row)
 		}
 	}
 	
@@ -104,6 +106,21 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 			}
 			
 			strongSelf.value = value
+		}
+	}
+	
+	open func subscribe<T: RowType>(onCellHighlightChanged row: T) where T: BaseRow{
+		row.onCellHighlightChanged{ [weak self] cell, row in
+			guard let strongSelf = self,
+				let splitRowCell = strongSelf.cell,
+				let formViewController = strongSelf.cell.formViewController()
+				else { return }
+
+			if cell.isHighlighted || row.isHighlighted {
+				formViewController.beginEditing(of: splitRowCell)
+			} else {
+				formViewController.endEditing(of: splitRowCell)
+			}
 		}
 	}
 }
