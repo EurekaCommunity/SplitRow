@@ -67,6 +67,11 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 		willSet{
 			newValue?.tag = SplitRowTag.left.rawValue
 			guard let row = newValue else{ return }
+			
+			var rowValue = self.value ?? SplitRowValue<L.Cell.Value,R.Cell.Value>()
+			rowValue.left = row.value
+			self.value = rowValue
+			
 			subscribe(onChange: row)
 			subscribe(onCellHighlightChanged: row)
 		}
@@ -77,6 +82,11 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 		willSet{
 			newValue?.tag = SplitRowTag.right.rawValue
 			guard let row = newValue else{ return }
+			
+			var rowValue = self.value ?? SplitRowValue<L.Cell.Value,R.Cell.Value>()
+			rowValue.right = row.value
+			self.value = rowValue
+			
 			subscribe(onChange: row)
 			subscribe(onCellHighlightChanged: row)
 		}
