@@ -65,6 +65,22 @@ class ViewController: FormViewController{
 				}
 		}
 		
+		form +++ Section("Social Media")
+			<<< SplitRow<ActionSheetRow<String>, AccountRow>(){
+				$0.rowLeft = ActionSheetRow<String>(){
+					$0.options = ["Facebook","Twitter","Instagram"]
+				}
+				
+				$0.rowRight = AccountRow(){
+					$0.placeholder = "Username"
+					$0.value = "@SplitRow"
+				
+				}.cellUpdate{ cell, row in
+					cell.textField?.clearButtonMode = .whileEditing
+					cell.textField?.textAlignment = .right
+				}
+			}
+		
 		form +++ MultivaluedSection(multivaluedOptions: [.Insert,.Delete,.Reorder], header: "URLs", footer: ""){
 			$0.multivaluedRowToInsertAt = { _ in
 				return SplitRow<PushRow<String>,URLRow>(){
