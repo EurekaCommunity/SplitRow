@@ -14,6 +14,12 @@
 		7977107D1FDAD27100917866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7977107B1FDAD27100917866 /* Main.storyboard */; };
 		7977107F1FDAD27100917866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7977107E1FDAD27100917866 /* Assets.xcassets */; };
 		797710821FDAD27100917866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797710801FDAD27100917866 /* LaunchScreen.storyboard */; };
+		7983DCA720B0C44500963F05 /* SplitRowValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB411FD4767500983E52 /* SplitRowValue.swift */; };
+		7983DCA820B0C44500963F05 /* SplitRowCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */; };
+		7983DCA920B0C44500963F05 /* SplitRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB421FD4767500983E52 /* SplitRowCell.swift */; };
+		7983DCAA20B0C44500963F05 /* SplitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB401FD4767500983E52 /* SplitRow.swift */; };
+		7983DCAE20B0C44500963F05 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7983DCB720B0C50200963F05 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7983DCB620B0C50100963F05 /* Eureka.framework */; };
 		79B5CB301FD4756500983E52 /* SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB261FD4756500983E52 /* SplitRow.framework */; };
 		79B5CB351FD4756500983E52 /* SplitRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB341FD4756500983E52 /* SplitRowTests.swift */; };
 		79B5CB371FD4756500983E52 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,6 +60,8 @@
 		7977107E1FDAD27100917866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		797710811FDAD27100917866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797710831FDAD27100917866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7983DCB420B0C44500963F05 /* SplitRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplitRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7983DCB620B0C50100963F05 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		79B5CB261FD4756500983E52 /* SplitRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplitRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B5CB291FD4756500983E52 /* SplitRow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplitRow.h; sourceTree = "<group>"; };
 		79B5CB2A1FD4756500983E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +85,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				148193C2A89A285F9169834D /* Pods_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7983DCAB20B0C44500963F05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7983DCB720B0C50200963F05 /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +161,7 @@
 				79B5CB261FD4756500983E52 /* SplitRow.framework */,
 				79B5CB2F1FD4756500983E52 /* SplitRowTests.xctest */,
 				797710751FDAD27100917866 /* Example.app */,
+				7983DCB420B0C44500963F05 /* SplitRow.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +191,7 @@
 		79B5CB481FD47B8A00983E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7983DCB620B0C50100963F05 /* Eureka.framework */,
 				B7966D658B0381D7985F87C5 /* Pods_Example.framework */,
 				B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */,
 				292265190EEB0208296B082B /* Pods_SplitRowTests.framework */,
@@ -192,6 +210,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		7983DCAD20B0C44500963F05 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7983DCAE20B0C44500963F05 /* SplitRow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B5CB231FD4756500983E52 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,9 +251,27 @@
 			productReference = 797710751FDAD27100917866 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		79B5CB251FD4756500983E52 /* SplitRow */ = {
+		7983DCA420B0C44500963F05 /* [Carthage] SplitRow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79B5CB3A1FD4756500983E52 /* Build configuration list for PBXNativeTarget "SplitRow" */;
+			buildConfigurationList = 7983DCB120B0C44500963F05 /* Build configuration list for PBXNativeTarget "[Carthage] SplitRow" */;
+			buildPhases = (
+				7983DCA620B0C44500963F05 /* Sources */,
+				7983DCAB20B0C44500963F05 /* Frameworks */,
+				7983DCAD20B0C44500963F05 /* Headers */,
+				7983DCAF20B0C44500963F05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "[Carthage] SplitRow";
+			productName = SplitRow;
+			productReference = 7983DCB420B0C44500963F05 /* SplitRow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		79B5CB251FD4756500983E52 /* [CP] SplitRow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79B5CB3A1FD4756500983E52 /* Build configuration list for PBXNativeTarget "[CP] SplitRow" */;
 			buildPhases = (
 				0BEA14AB34CD07BA3D20DFB8 /* [CP] Check Pods Manifest.lock */,
 				79B5CB211FD4756500983E52 /* Sources */,
@@ -240,7 +284,7 @@
 			);
 			dependencies = (
 			);
-			name = SplitRow;
+			name = "[CP] SplitRow";
 			productName = SplitRow;
 			productReference = 79B5CB261FD4756500983E52 /* SplitRow.framework */;
 			productType = "com.apple.product-type.framework";
@@ -280,6 +324,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					7983DCA420B0C44500963F05 = {
+						ProvisioningStyle = Automatic;
+					};
 					79B5CB251FD4756500983E52 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0910;
@@ -304,7 +351,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79B5CB251FD4756500983E52 /* SplitRow */,
+				79B5CB251FD4756500983E52 /* [CP] SplitRow */,
+				7983DCA420B0C44500963F05 /* [Carthage] SplitRow */,
 				79B5CB2E1FD4756500983E52 /* SplitRowTests */,
 				797710741FDAD27100917866 /* Example */,
 			);
@@ -319,6 +367,13 @@
 				797710821FDAD27100917866 /* LaunchScreen.storyboard in Resources */,
 				7977107F1FDAD27100917866 /* Assets.xcassets in Resources */,
 				7977107D1FDAD27100917866 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7983DCAF20B0C44500963F05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +557,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7983DCA620B0C44500963F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7983DCA720B0C44500963F05 /* SplitRowValue.swift in Sources */,
+				7983DCA820B0C44500963F05 /* SplitRowCellTableView.swift in Sources */,
+				7983DCA920B0C44500963F05 /* SplitRowCell.swift in Sources */,
+				7983DCAA20B0C44500963F05 /* SplitRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79B5CB211FD4756500983E52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -526,12 +592,12 @@
 /* Begin PBXTargetDependency section */
 		7977108B1FDAD30900917866 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79B5CB251FD4756500983E52 /* SplitRow */;
+			target = 79B5CB251FD4756500983E52 /* [CP] SplitRow */;
 			targetProxy = 7977108A1FDAD30900917866 /* PBXContainerItemProxy */;
 		};
 		79B5CB321FD4756500983E52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79B5CB251FD4756500983E52 /* SplitRow */;
+			target = 79B5CB251FD4756500983E52 /* [CP] SplitRow */;
 			targetProxy = 79B5CB311FD4756500983E52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -589,6 +655,61 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7983DCB220B0C44500963F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YB5VLT2EJC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SplitRow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.SplitRow;
+				PRODUCT_NAME = SplitRow;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7983DCB320B0C44500963F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YB5VLT2EJC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SplitRow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.SplitRow;
+				PRODUCT_NAME = SplitRow;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -733,7 +854,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.SplitRow;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SplitRow;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -761,7 +882,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.SplitRow;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SplitRow;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -812,6 +933,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7983DCB120B0C44500963F05 /* Build configuration list for PBXNativeTarget "[Carthage] SplitRow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7983DCB220B0C44500963F05 /* Debug */,
+				7983DCB320B0C44500963F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79B5CB201FD4756500983E52 /* Build configuration list for PBXProject "SplitRow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -821,7 +951,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79B5CB3A1FD4756500983E52 /* Build configuration list for PBXNativeTarget "SplitRow" */ = {
+		79B5CB3A1FD4756500983E52 /* Build configuration list for PBXNativeTarget "[CP] SplitRow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79B5CB3B1FD4756500983E52 /* Debug */,
