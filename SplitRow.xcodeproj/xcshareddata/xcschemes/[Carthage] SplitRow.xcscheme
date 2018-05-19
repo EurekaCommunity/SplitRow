@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79B5CB251FD4756500983E52"
-               BuildableName = "SplitRow.framework"
-               BlueprintName = "SplitRow"
+               BlueprintIdentifier = "7983DCA420B0C44500963F05"
+               BuildableName = "[Carthage] SplitRow.framework"
+               BlueprintName = "[Carthage] SplitRow"
                ReferencedContainer = "container:SplitRow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79B5CB2E1FD4756500983E52"
-               BuildableName = "SplitRowTests.xctest"
-               BlueprintName = "SplitRowTests"
-               ReferencedContainer = "container:SplitRow.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79B5CB251FD4756500983E52"
-            BuildableName = "SplitRow.framework"
-            BlueprintName = "SplitRow"
-            ReferencedContainer = "container:SplitRow.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79B5CB251FD4756500983E52"
-            BuildableName = "SplitRow.framework"
-            BlueprintName = "SplitRow"
+            BlueprintIdentifier = "7983DCA420B0C44500963F05"
+            BuildableName = "[Carthage] SplitRow.framework"
+            BlueprintName = "[Carthage] SplitRow"
             ReferencedContainer = "container:SplitRow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79B5CB251FD4756500983E52"
-            BuildableName = "SplitRow.framework"
-            BlueprintName = "SplitRow"
+            BlueprintIdentifier = "7983DCA420B0C44500963F05"
+            BuildableName = "[Carthage] SplitRow.framework"
+            BlueprintName = "[Carthage] SplitRow"
             ReferencedContainer = "container:SplitRow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
