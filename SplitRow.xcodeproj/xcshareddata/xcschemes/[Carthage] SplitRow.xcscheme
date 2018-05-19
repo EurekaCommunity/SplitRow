@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7983DCA420B0C44500963F05"
-               BuildableName = "[Carthage] SplitRow.framework"
+               BuildableName = "SplitRow.framework"
                BlueprintName = "[Carthage] SplitRow"
                ReferencedContainer = "container:SplitRow.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7983DCA420B0C44500963F05"
-            BuildableName = "[Carthage] SplitRow.framework"
+            BuildableName = "SplitRow.framework"
             BlueprintName = "[Carthage] SplitRow"
             ReferencedContainer = "container:SplitRow.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7983DCA420B0C44500963F05"
-            BuildableName = "[Carthage] SplitRow.framework"
+            BuildableName = "SplitRow.framework"
             BlueprintName = "[Carthage] SplitRow"
             ReferencedContainer = "container:SplitRow.xcodeproj">
          </BuildableReference>
