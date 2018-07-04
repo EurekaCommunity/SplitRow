@@ -11,5 +11,5 @@ s.source       = { :git => "https://github.com/EurekaCommunity/SplitRow.git", :t
 s.source_files  = "SplitRow/**/*.{swift}"
 s.frameworks = "UIKit", "Foundation"
 s.requires_arc = true
-s.dependency "Eureka", "~> 4.1.0"
+s.dependency "Eureka", "~> 4.0"
 end

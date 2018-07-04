@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		148193C2A89A285F9169834D /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7966D658B0381D7985F87C5 /* Pods_Example.framework */; };
+		250890DCA8B74E35EF914141 /* Pods__CP__SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68F61C8CF74838A0D7640A4 /* Pods__CP__SplitRow.framework */; };
 		750C064FE84DB87B0692EDD4 /* Pods_SplitRowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292265190EEB0208296B082B /* Pods_SplitRowTests.framework */; };
 		797710781FDAD27100917866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710771FDAD27100917866 /* AppDelegate.swift */; };
 		7977107A1FDAD27100917866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710791FDAD27100917866 /* ViewController.swift */; };
@@ -50,8 +51,9 @@
 /* Begin PBXFileReference section */
 		27EDCC01E695BE759AD2A92D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		292265190EEB0208296B082B /* Pods_SplitRowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitRowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRow/Pods-SplitRow.debug.xcconfig"; sourceTree = "<group>"; };
+		30E75B0ECDB567A768259853 /* Pods-[CP] SplitRow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[CP] SplitRow.release.xcconfig"; path = "Pods/Target Support Files/Pods-[CP] SplitRow/Pods-[CP] SplitRow.release.xcconfig"; sourceTree = "<group>"; };
 		638FAE23CE9EA43635267CD7 /* Pods-SplitRowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6933D2CC4FBAD3D15D2131C4 /* Pods-[CP] SplitRow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[CP] SplitRow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-[CP] SplitRow/Pods-[CP] SplitRow.debug.xcconfig"; sourceTree = "<group>"; };
 		78FD8B9122FB971CCD8CAD80 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		797710751FDAD27100917866 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797710771FDAD27100917866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitRowCellTableView.swift; sourceTree = "<group>"; };
 		79B5CB4D1FD4806D00983E52 /* SplitRow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SplitRow.jpg; sourceTree = "<group>"; };
 		96507E193F5205CB3720DC80 /* Pods-SplitRowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests.release.xcconfig"; sourceTree = "<group>"; };
-		B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRow.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRow/Pods-SplitRow.release.xcconfig"; sourceTree = "<group>"; };
+		A68F61C8CF74838A0D7640A4 /* Pods__CP__SplitRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__CP__SplitRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7966D658B0381D7985F87C5 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC9F92D66E1A76152FD65CC /* Pods_SplitRow.framework in Frameworks */,
+				250890DCA8B74E35EF914141 /* Pods__CP__SplitRow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,10 +124,10 @@
 			children = (
 				78FD8B9122FB971CCD8CAD80 /* Pods-Example.debug.xcconfig */,
 				27EDCC01E695BE759AD2A92D /* Pods-Example.release.xcconfig */,
-				5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */,
-				B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */,
 				638FAE23CE9EA43635267CD7 /* Pods-SplitRowTests.debug.xcconfig */,
 				96507E193F5205CB3720DC80 /* Pods-SplitRowTests.release.xcconfig */,
+				6933D2CC4FBAD3D15D2131C4 /* Pods-[CP] SplitRow.debug.xcconfig */,
+				30E75B0ECDB567A768259853 /* Pods-[CP] SplitRow.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				B7966D658B0381D7985F87C5 /* Pods_Example.framework */,
 				B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */,
 				292265190EEB0208296B082B /* Pods_SplitRowTests.framework */,
+				A68F61C8CF74838A0D7640A4 /* Pods__CP__SplitRow.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,7 +243,6 @@
 				797710731FDAD27100917866 /* Resources */,
 				797710891FDAD28A00917866 /* Copy Carthage Frameworks */,
 				4CA7CD32AAC86739F5BB2947 /* [CP] Embed Pods Frameworks */,
-				8B66F1106542D2A999D77448 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,7 +281,6 @@
 				79B5CB221FD4756500983E52 /* Frameworks */,
 				79B5CB231FD4756500983E52 /* Headers */,
 				79B5CB241FD4756500983E52 /* Resources */,
-				A05E37F33023B623329F1D5F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,7 +300,6 @@
 				79B5CB2C1FD4756500983E52 /* Frameworks */,
 				79B5CB2D1FD4756500983E52 /* Resources */,
 				0B5A0FF36D7322F28DBE6304 /* [CP] Embed Pods Frameworks */,
-				99567A7FA1D996F655E9AB01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,7 +424,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SplitRow-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-[CP] SplitRow-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -481,51 +482,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		8B66F1106542D2A999D77448 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99567A7FA1D996F655E9AB01 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A05E37F33023B623329F1D5F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitRow/Pods-SplitRow-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		D31C86CC9D8AF6758786E20E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -662,7 +618,6 @@
 		};
 		7983DCB220B0C44500963F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -690,7 +645,6 @@
 		};
 		7983DCB320B0C44500963F05 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -836,7 +790,7 @@
 		};
 		79B5CB3B1FD4756500983E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AFCF84F589010FDFCBB1874 /* Pods-SplitRow.debug.xcconfig */;
+			baseConfigurationReference = 6933D2CC4FBAD3D15D2131C4 /* Pods-[CP] SplitRow.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -864,7 +818,7 @@
 		};
 		79B5CB3C1FD4756500983E52 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3F04DCEFF10E6EEBEF85239 /* Pods-SplitRow.release.xcconfig */;
+			baseConfigurationReference = 30E75B0ECDB567A768259853 /* Pods-[CP] SplitRow.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
