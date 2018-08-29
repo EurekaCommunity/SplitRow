@@ -26,6 +26,7 @@ By [MANDELKIND](http://mandelkind.swiss).
 ## Usage
 
 ```swift
+import Eureka
 import SplitRow
 
 class ViewController: FormViewController {
