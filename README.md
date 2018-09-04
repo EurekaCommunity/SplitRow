@@ -36,14 +36,44 @@ class ViewController: FormViewController {
 
         form +++ Section()
             <<< SplitRow<PushRow<String>,TextRow>(){
-		            $0.rowLeft = PushRow<String>(){
-            			$0.selectorTitle = "E-Mail"
-            			$0.options = ["Private","Work","Others"]
-            		}
+		$0.rowLeft = PushRow<String>(){
+			$0.selectorTitle = "E-Mail"
+			$0.options = ["Private","Work","Others"]
+		}
+
+		$0.rowRight = TextRow(){
+			$0.placeholder = "E-Mail"
+		}
+
+		}.onChange{
+			print("SplitRow.onChange:","left:",$0.value?.left,"right:",$0.value?.right)
+		}
+    }
+}
+```
+
+Example by changing the percentage of the row on the right
+
+```swift
+import Eureka
+import SplitRow
+
+class ViewController: FormViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        form +++ Section()
+            <<< SplitRow<PushRow<String>,TextRow>(){
+		$0.rowLeftPercentage = 0.5
+			$0.rowLeft = PushRow<String>(){
+			$0.selectorTitle = "E-Mail"
+			$0.options = ["Private","Work","Others"]
+		}
 					
-            		$0.rowRight = TextRow(){
-            			$0.placeholder = "E-Mail"
-            		}
+		$0.rowRight = TextRow(){
+			$0.placeholder = "E-Mail"
+		}
 				
         	}.onChange{
         		print("SplitRow.onChange:","left:",$0.value?.left,"right:",$0.value?.right)
