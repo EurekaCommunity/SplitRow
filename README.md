@@ -13,6 +13,7 @@ By [MANDELKIND](http://mandelkind.swiss).
 
 ## Contents
  * [Introduction](#introduction)
+ * [Installation](#Installation)
  * [Usage](#usage)
  * [Requirements](#requirements)
  * [Getting involved](#getting-involved)
@@ -22,6 +23,28 @@ By [MANDELKIND](http://mandelkind.swiss).
 `SplitRow` is a custom row for Eureka designed to put two rows side by side into the same UITableViewCell.
 
 <img src="Media/SplitRow.jpg" width="450"/>
+
+## Installation
+
+#### CocoaPods
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects.
+
+Specify Eureka into your project's `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+pod 'SplitRow'
+```
+
+Then run the following command:
+
+```bash
+$ pod install
+```
 
 ## Usage
 
