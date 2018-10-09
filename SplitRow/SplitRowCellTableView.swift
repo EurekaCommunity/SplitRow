@@ -8,7 +8,7 @@
 
 import Eureka
 
-class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, UITableViewDataSource{
+public class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, UITableViewDataSource{
 
 	var row: T?
 	
