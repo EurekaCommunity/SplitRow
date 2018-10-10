@@ -9,8 +9,8 @@
 import Eureka
 
 open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value,R.Cell.Value>>, CellType where L: BaseRow, R: BaseRow{
-	public var tableViewLeft: SplitRowCellTableView<L>!
-	public var tableViewRight: SplitRowCellTableView<R>!
+	var tableViewLeft: SplitRowCellTableView<L>!
+    var tableViewRight: SplitRowCellTableView<R>!
 	
 	open override var isHighlighted: Bool {
 		get { return super.isHighlighted || (tableViewLeft.row?.cell?.isHighlighted ?? false) || (tableViewRight.row?.cell?.isHighlighted ?? false) }

@@ -76,6 +76,12 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 			subscribe(onCellHighlightChanged: row)
 		}
 	}
+    
+    public var rowLeftBackgroundColor: UIColor? {
+        get { return cell.tableViewLeft.backgroundColor }
+        set { cell.tableViewLeft.backgroundColor = newValue }
+    }
+    
 	public var rowLeftPercentage: CGFloat = 0.3
 	
 	public var rowRight: R?{
@@ -91,6 +97,11 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 			subscribe(onCellHighlightChanged: row)
 		}
 	}
+    
+    public var rowRightBackgroundColor: UIColor? {
+        get { return cell.tableViewRight.backgroundColor }
+        set { cell.tableViewRight.backgroundColor = newValue }
+    }
 	
 	public var rowRightPercentage: CGFloat{
 		return 1.0 - self.rowLeftPercentage
