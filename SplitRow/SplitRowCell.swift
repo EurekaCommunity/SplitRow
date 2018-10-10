@@ -21,11 +21,13 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
 		self.tableViewLeft = SplitRowCellTableView()
+        tableViewLeft.backgroundColor = .clear
 		tableViewLeft.separatorStyle = .none
 		tableViewLeft.leftSeparatorStyle = .none
 		tableViewLeft.translatesAutoresizingMaskIntoConstraints = false
 		
 		self.tableViewRight = SplitRowCellTableView()
+        tableViewRight.backgroundColor = .clear
 		tableViewRight.separatorStyle = .none
 		tableViewRight.leftSeparatorStyle = .singleLine
 		tableViewRight.translatesAutoresizingMaskIntoConstraints = false

@@ -77,6 +77,8 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 		}
 	}
     
+    /// The left rows background color.
+    /// - note: Use `cell.backgroundColor` to change the entire row's background color.
     public var rowLeftBackgroundColor: UIColor? {
         get { return cell.tableViewLeft.backgroundColor }
         set { cell.tableViewLeft.backgroundColor = newValue }
@@ -98,6 +100,8 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 		}
 	}
     
+    /// The right rows background color.
+    /// - note: Use `cell.backgroundColor` to change the entire row's background color.
     public var rowRightBackgroundColor: UIColor? {
         get { return cell.tableViewRight.backgroundColor }
         set { cell.tableViewRight.backgroundColor = newValue }
