@@ -14,7 +14,7 @@ target '[CP] SplitRow' do
   use_frameworks!
 
   # Pods for SplitRow
-pod 'Eureka', '~>4.2.0'
+pod 'Eureka', '~>4.3.0'
   target 'SplitRowTests' do
     inherit! :search_paths
     # Pods for testing
