@@ -49,7 +49,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		
 		//TODO: If we use UITableViewAutomaticDimension instead of 44.0 we encounter constraint errors :(
 		let maxRowHeight = max(row.rowLeft?.cell?.height?() ?? 44.0, row.rowRight?.cell?.height?() ?? 44.0)
-		if maxRowHeight != UITableView.automaticDimension{
+        if maxRowHeight != UITableView.automaticDimension{
 			self.height = { maxRowHeight }
 			row.rowLeft?.cell?.height = self.height
 			row.rowRight?.cell?.height = self.height

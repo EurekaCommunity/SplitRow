@@ -46,6 +46,22 @@ Then run the following command:
 $ pod install
 ```
 
+#### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a simple, decentralized dependency manager for Cocoa.
+
+Specify SplitRow into your project's `Cartfile`:
+
+```
+github "EurekaCommunity/SplitRow" ~> 1.3
+```
+
+Then run the following command:
+
+```bash
+$ carthage bootstrap --platform iOS
+```
+
 ## Usage
 
 ```swift

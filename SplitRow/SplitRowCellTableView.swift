@@ -90,7 +90,7 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 			separatorView.translatesAutoresizingMaskIntoConstraints = false
 
 			cell.addSubview(separatorView)
-			cell.bringSubviewToFront(separatorView)
+            cell.bringSubviewToFront(separatorView)
 			
 			cell.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[separatorView(1)]", options: [], metrics: nil, views: ["separatorView":separatorView]))
 			cell.addConstraint(NSLayoutConstraint(item: separatorView, attribute: .top, relatedBy: .equal, toItem: cell, attribute: .top, multiplier: 1.0, constant: 11.0))

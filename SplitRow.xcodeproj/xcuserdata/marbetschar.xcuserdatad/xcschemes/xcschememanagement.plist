@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Example.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>SplitRowTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>[CP] SplitRow.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,7 +27,7 @@
 		<key>[Carthage] SplitRow.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
