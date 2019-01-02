@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "SplitRow"
-s.version      = "1.2.1"
+s.version      = "1.3.0"
 s.summary      = "A row for Eureka to put two rows side by side into the same UITableViewCell."
 s.homepage     = "https://github.com/EurekaCommunity/SplitRow"
 s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -11,5 +11,5 @@ s.source       = { :git => "https://github.com/EurekaCommunity/SplitRow.git", :t
 s.source_files  = "SplitRow/**/*.{swift}"
 s.frameworks = "UIKit", "Foundation"
 s.requires_arc = true
-s.dependency "Eureka", "~> 4.0"
+s.dependency "Eureka", "~> 4.3"
 end
