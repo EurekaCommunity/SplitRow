@@ -12,7 +12,7 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 
 	var row: T?
 	
-	var leftSeparatorStyle: UITableViewCellSeparatorStyle = .none{
+	var leftSeparatorStyle: UITableViewCell.SeparatorStyle = .none{
 		didSet{
 			if oldValue != self.leftSeparatorStyle{
 				self.reloadData()
@@ -20,7 +20,7 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 		}
 	}
 	
-	override init(frame: CGRect, style: UITableViewStyle) {
+	override init(frame: CGRect, style: UITableView.Style) {
 		super.init(frame: frame, style: style)
 
 		self.dataSource = self
@@ -90,7 +90,7 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 			separatorView.translatesAutoresizingMaskIntoConstraints = false
 
 			cell.addSubview(separatorView)
-			cell.bringSubview(toFront: separatorView)
+			cell.bringSubviewToFront(separatorView)
 			
 			cell.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[separatorView(1)]", options: [], metrics: nil, views: ["separatorView":separatorView]))
 			cell.addConstraint(NSLayoutConstraint(item: separatorView, attribute: .top, relatedBy: .equal, toItem: cell, attribute: .top, multiplier: 1.0, constant: 11.0))

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		148193C2A89A285F9169834D /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7966D658B0381D7985F87C5 /* Pods_Example.framework */; };
-		250890DCA8B74E35EF914141 /* Pods__CP__SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68F61C8CF74838A0D7640A4 /* Pods__CP__SplitRow.framework */; };
+		2DF6C97521C03E6B00B8749E /* Pods__CP__SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF6C97421C03E6B00B8749E /* Pods__CP__SplitRow.framework */; };
+		2DF6C97721C03EDF00B8749E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF6C97621C03EDF00B8749E /* Eureka.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		750C064FE84DB87B0692EDD4 /* Pods_SplitRowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292265190EEB0208296B082B /* Pods_SplitRowTests.framework */; };
 		797710781FDAD27100917866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710771FDAD27100917866 /* AppDelegate.swift */; };
 		7977107A1FDAD27100917866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797710791FDAD27100917866 /* ViewController.swift */; };
@@ -20,7 +21,6 @@
 		7983DCA920B0C44500963F05 /* SplitRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB421FD4767500983E52 /* SplitRowCell.swift */; };
 		7983DCAA20B0C44500963F05 /* SplitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB401FD4767500983E52 /* SplitRow.swift */; };
 		7983DCAE20B0C44500963F05 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7983DCB720B0C50200963F05 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7983DCB620B0C50100963F05 /* Eureka.framework */; };
 		79B5CB301FD4756500983E52 /* SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B5CB261FD4756500983E52 /* SplitRow.framework */; };
 		79B5CB351FD4756500983E52 /* SplitRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB341FD4756500983E52 /* SplitRowTests.swift */; };
 		79B5CB371FD4756500983E52 /* SplitRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B5CB291FD4756500983E52 /* SplitRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,7 +28,6 @@
 		79B5CB451FD4767600983E52 /* SplitRowValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB411FD4767500983E52 /* SplitRowValue.swift */; };
 		79B5CB461FD4767600983E52 /* SplitRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB421FD4767500983E52 /* SplitRowCell.swift */; };
 		79B5CB471FD4767600983E52 /* SplitRowCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5CB431FD4767500983E52 /* SplitRowCellTableView.swift */; };
-		BDC9F92D66E1A76152FD65CC /* Pods_SplitRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +50,8 @@
 /* Begin PBXFileReference section */
 		27EDCC01E695BE759AD2A92D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		292265190EEB0208296B082B /* Pods_SplitRowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitRowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF6C97421C03E6B00B8749E /* Pods__CP__SplitRow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods__CP__SplitRow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF6C97621C03EDF00B8749E /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E75B0ECDB567A768259853 /* Pods-[CP] SplitRow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[CP] SplitRow.release.xcconfig"; path = "Pods/Target Support Files/Pods-[CP] SplitRow/Pods-[CP] SplitRow.release.xcconfig"; sourceTree = "<group>"; };
 		638FAE23CE9EA43635267CD7 /* Pods-SplitRowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitRowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitRowTests/Pods-SplitRowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6933D2CC4FBAD3D15D2131C4 /* Pods-[CP] SplitRow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[CP] SplitRow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-[CP] SplitRow/Pods-[CP] SplitRow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7983DCB720B0C50200963F05 /* Eureka.framework in Frameworks */,
+				2DF6C97721C03EDF00B8749E /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC9F92D66E1A76152FD65CC /* Pods_SplitRow.framework in Frameworks */,
-				250890DCA8B74E35EF914141 /* Pods__CP__SplitRow.framework in Frameworks */,
+				2DF6C97521C03E6B00B8749E /* Pods__CP__SplitRow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +194,8 @@
 		79B5CB481FD47B8A00983E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DF6C97621C03EDF00B8749E /* Eureka.framework */,
+				2DF6C97421C03E6B00B8749E /* Pods__CP__SplitRow.framework */,
 				7983DCB620B0C50100963F05 /* Eureka.framework */,
 				B7966D658B0381D7985F87C5 /* Pods_Example.framework */,
 				B83D0DD68492E96639AB3F99 /* Pods_SplitRow.framework */,
@@ -330,11 +332,12 @@
 					};
 					79B5CB251FD4756500983E52 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					79B5CB2E1FD4756500983E52 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -811,7 +814,7 @@
 				PRODUCT_NAME = SplitRow;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -838,7 +841,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.SplitRow;
 				PRODUCT_NAME = SplitRow;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -854,7 +857,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.SplitRowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -870,7 +873,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiss.mandelkind.SplitRowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
