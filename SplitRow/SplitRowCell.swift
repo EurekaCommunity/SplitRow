@@ -31,12 +31,12 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		tableViewRight.separatorStyle = .none
 		tableViewRight.leftSeparatorStyle = .singleLine
 		tableViewRight.translatesAutoresizingMaskIntoConstraints = false
-		
+        
 		contentView.addSubview(tableViewLeft)
-		contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1.0, constant: 0.0))
+		contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .leftMargin, relatedBy: .equal, toItem: contentView, attribute: .leftMargin, multiplier: 1.0, constant: 0.0))
 		
 		contentView.addSubview(tableViewRight)
-		contentView.addConstraint(NSLayoutConstraint(item: tableViewRight, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1.0, constant: 0.0))
+		contentView.addConstraint(NSLayoutConstraint(item: tableViewRight, attribute: .rightMargin, relatedBy: .equal, toItem: contentView, attribute: .rightMargin, multiplier: 1.0, constant: 0.0))
 	}
 	
 	required public init?(coder aDecoder: NSCoder) {
