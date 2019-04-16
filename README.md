@@ -3,7 +3,7 @@ A row for Eureka to put two rows side by side into the same UITableViewCell.
 
 <p align="left">
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat" alt="Swift 4 compatible" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift5-compatible-4BC51D.svg?style=flat" alt="Swift 5 compatible" /></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
 <a href="https://cocoapods.org/pods/SplitRow"><img src="https://img.shields.io/cocoapods/v/SplitRow.svg" alt="CocoaPods compatible" /></a>
 <a href="https://raw.githubusercontent.com/EurekaCommunity/SplitRow/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
@@ -34,7 +34,7 @@ Specify Eureka into your project's `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 
 pod 'SplitRow'
@@ -53,7 +53,7 @@ $ pod install
 Specify SplitRow into your project's `Cartfile`:
 
 ```
-github "EurekaCommunity/SplitRow" ~> 1.3
+github "EurekaCommunity/SplitRow" ~> 2.0.0
 ```
 
 Then run the following command:
@@ -123,9 +123,9 @@ class ViewController: FormViewController {
 
 ## Requirements
 
-* iOS 9.0+
+* iOS 10.0+
 * Xcode 9.0+
-* Eureka ~> 4.1
+* Eureka ~> 5.0
 
 ## Getting involved
 
