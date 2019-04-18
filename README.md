@@ -34,7 +34,7 @@ Specify Eureka into your project's `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
+platform :ios, '9.3'
 use_frameworks!
 
 pod 'SplitRow'
@@ -123,7 +123,7 @@ class ViewController: FormViewController {
 
 ## Requirements
 
-* iOS 10.0+
+* iOS 9.3+
 * Xcode 9.0+
 * Eureka ~> 5.0
 
