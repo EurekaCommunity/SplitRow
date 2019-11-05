@@ -51,7 +51,7 @@ $ pod install
 Specify SplitRow into your project's `Cartfile`:
 
 ```
-github "EurekaCommunity/SplitRow" ~> 2.1.0
+github "EurekaCommunity/SplitRow" ~> 2.1.1
 ```
 
 Then run the following command:
