@@ -75,18 +75,18 @@ class ViewController: FormViewController {
 
         form +++ Section()
             <<< SplitRow<PushRow<String>,TextRow>(){
-		$0.rowLeft = PushRow<String>(){
-			$0.selectorTitle = "E-Mail"
-			$0.options = ["Private","Work","Others"]
-		}
+                $0.rowLeft = PushRow<String>(){
+                    $0.selectorTitle = "E-Mail"
+                    $0.options = ["Private","Work","Others"]
+                }
 
-		$0.rowRight = TextRow(){
-			$0.placeholder = "E-Mail"
-		}
+                $0.rowRight = TextRow(){
+                    $0.placeholder = "E-Mail"
+                }
 
-		}.onChange{
-			print("SplitRow.onChange:","left:",$0.value?.left,"right:",$0.value?.right)
-		}
+            }.onChange{
+                print("SplitRow.onChange:","left:",$0.value?.left,"right:",$0.value?.right)
+            }
     }
 }
 ```
@@ -104,20 +104,20 @@ class ViewController: FormViewController {
 
         form +++ Section()
             <<< SplitRow<PushRow<String>,TextRow>(){
-				$0.rowLeftPercentage = 0.5
+                $0.rowLeftPercentage = 0.5
 
-				$0.rowLeft = PushRow<String>(){
-					$0.selectorTitle = "E-Mail"
-					$0.options = ["Private","Work","Others"]
-				}
+                $0.rowLeft = PushRow<String>(){
+                    $0.selectorTitle = "E-Mail"
+                    $0.options = ["Private","Work","Others"]
+                }
 				
-				$0.rowRight = TextRow(){
-					$0.placeholder = "E-Mail"
-				}
-				
-        	}.onChange{
-        		print("SplitRow.onChange:","left:",$0.value?.left,"right:",$0.value?.right)
-        	}
+                $0.rowRight = TextRow(){
+                    $0.placeholder = "E-Mail"
+                }
+
+            }.onChange{
+                print("SplitRow.onChange:","left:",$0.value?.left,"right:",$0.value?.right)
+            }
     }
 }
 ```
