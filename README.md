@@ -9,8 +9,6 @@ A row for Eureka to put two rows side by side into the same UITableViewCell.
 <a href="https://raw.githubusercontent.com/EurekaCommunity/SplitRow/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 </p>
 
-By [MANDELKIND](http://mandelkind.swiss).
-
 ## Contents
  * [Introduction](#introduction)
  * [Installation](#Installation)
