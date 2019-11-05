@@ -133,6 +133,9 @@ class ViewController: FormViewController {
 * If you **want to contribute** please feel free to **submit pull requests**.
 * If you **have a feature request** please **open an issue**.
 
-## Author
+## Authors
 
+<small>A-Z</small>
+
+* [Kate Mercer](https://github.com/kamerc)
 * [Marco Betschart](https://github.com/marbetschar)
