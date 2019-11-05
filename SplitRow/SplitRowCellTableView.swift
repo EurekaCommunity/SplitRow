@@ -33,6 +33,9 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 	
 	open func setup(){
 		guard let row = self.row else{ return }
+        if #available(iOS 13.0, *) {
+            row.baseCell.backgroundColor = .clear
+        }
 		row.baseCell.setup()
 		row.baseCell.selectionStyle = .none
 	}
