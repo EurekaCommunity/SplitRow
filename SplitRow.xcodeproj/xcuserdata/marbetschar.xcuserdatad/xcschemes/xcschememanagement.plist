@@ -12,17 +12,27 @@
 		<key>Example.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>SplitRowTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
+		</dict>
+		<key>[CP] Example.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>[CP] SplitRow.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>[Carthage] Example.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>[Carthage] SplitRow.xcscheme_^#shared#^_</key>
 		<dict>
@@ -33,6 +43,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>79B5CB251FD4756500983E52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79F3CB8D2371FFC300C21C3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
