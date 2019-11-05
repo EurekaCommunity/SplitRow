@@ -50,12 +50,12 @@
 			remoteGlobalIDString = 79B5CB251FD4756500983E52;
 			remoteInfo = SplitRow;
 		};
-		79F3CB8F2371FFC300C21C3C /* PBXContainerItemProxy */ = {
+		79C4F7E8237226BB005CB26D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79B5CB1D1FD4756500983E52 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 79B5CB251FD4756500983E52;
-			remoteInfo = SplitRow;
+			remoteGlobalIDString = 7983DCA420B0C44500963F05;
+			remoteInfo = "[Carthage] SplitRow";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -346,7 +346,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				79F3CB8E2371FFC300C21C3C /* PBXTargetDependency */,
+				79C4F7E9237226BB005CB26D /* PBXTargetDependency */,
 			);
 			name = "[Carthage] Example";
 			productName = Example;
@@ -604,10 +604,10 @@
 			target = 79B5CB251FD4756500983E52 /* [CP] SplitRow */;
 			targetProxy = 79B5CB311FD4756500983E52 /* PBXContainerItemProxy */;
 		};
-		79F3CB8E2371FFC300C21C3C /* PBXTargetDependency */ = {
+		79C4F7E9237226BB005CB26D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79B5CB251FD4756500983E52 /* [CP] SplitRow */;
-			targetProxy = 79F3CB8F2371FFC300C21C3C /* PBXContainerItemProxy */;
+			target = 7983DCA420B0C44500963F05 /* [Carthage] SplitRow */;
+			targetProxy = 79C4F7E8237226BB005CB26D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
