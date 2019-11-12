@@ -36,7 +36,9 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
         if #available(iOS 13.0, *) {
             row.baseCell.backgroundColor = .clear
         }
-		row.baseCell.setup()
+        if !(row is _StepperRow) {
+            row.baseCell.setup()
+        }
 		row.baseCell.selectionStyle = .none
 	}
 	
