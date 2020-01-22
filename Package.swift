@@ -9,8 +9,8 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/AndrewBennet/Eureka",
-            .revision("289a917a7b7ddf5c4f043a70f82510ca335461fd")
+            url: "https://github.com/xmartlabs/Eureka",
+            .revision("88c156b450879a867d4518ecf6d9a269c4cee71a")
         )
     ],
     targets: [
