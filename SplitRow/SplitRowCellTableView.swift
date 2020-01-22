@@ -7,6 +7,7 @@
 //
 
 import Eureka
+import UIKit
 
 class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, UITableViewDataSource{
 
