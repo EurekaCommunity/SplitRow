@@ -7,6 +7,7 @@
 //
 
 import Eureka
+import UIKit
 
 open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value,R.Cell.Value>>, CellType where L: BaseRow, R: BaseRow{
 	var tableViewLeft: SplitRowCellTableView<L>!
