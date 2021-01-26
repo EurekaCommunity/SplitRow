@@ -21,6 +21,12 @@ open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: Ba
 		}
 	}
 	
+	open override func validate(quietly: Bool = false) -> [ValidationError] {
+        	var errors = rowLeft?.validate(quietly: quietly) ?? []
+	        errors.append(contentsOf: rowRight?.validate(quietly: quietly) ?? [])
+        	return errors
+	}
+	
 	open override func updateCell(){
 		super.updateCell()
 		
