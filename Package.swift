@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "SplitRow", targets: ["SplitRow"])
     ],
     dependencies: [
-        .package(url: "https://github.com/xmartlabs/Eureka.git", from: "5.2.0")
+        .package(url: "https://github.com/xmartlabs/Eureka.git", from: "5.3.3")
     ],
     targets: [
         .target(
