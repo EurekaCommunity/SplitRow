@@ -124,7 +124,7 @@ class ViewController: FormViewController {
 
 * iOS 9.3+
 * Xcode 9.0+
-* Eureka ~> 5.1
+* Eureka ~> 5.3.3
 
 ## Getting involved
 
