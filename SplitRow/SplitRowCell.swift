@@ -21,13 +21,15 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	public required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
-		self.tableViewLeft = SplitRowCellTableView()
+        let tableViewLeft: SplitRowCellTableView<L> = SplitRowCellTableView()
+        self.tableViewLeft = tableViewLeft
         tableViewLeft.backgroundColor = .clear
 		tableViewLeft.separatorStyle = .none
 		tableViewLeft.leftSeparatorStyle = .none
 		tableViewLeft.translatesAutoresizingMaskIntoConstraints = false
-		
-		self.tableViewRight = SplitRowCellTableView()
+
+        let tableViewRight: SplitRowCellTableView<R> = SplitRowCellTableView()
+        self.tableViewRight = tableViewRight
         tableViewRight.backgroundColor = .clear
 		tableViewRight.separatorStyle = .none
 		tableViewRight.leftSeparatorStyle = .singleLine
@@ -77,6 +79,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 	
 	private func setupConstraints(){
 		guard let row = self.row as? _SplitRow<L,R> else{ return }
+        guard let tableViewLeft = tableViewLeft, let tableViewRight = tableViewRight else{ return }
 		
 		if let height = self.height?(){
 			self.contentView.addConstraint(NSLayoutConstraint(item: tableViewLeft, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .height, multiplier: 1.0, constant: height))
