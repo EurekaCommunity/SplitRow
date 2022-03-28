@@ -12,5 +12,5 @@ s.source_files  = "SplitRow/**/*.{swift}"
 s.frameworks = "UIKit", "Foundation"
 s.requires_arc = true
 s.swift_version = "5.0"
-s.dependency "Eureka", "~> 5.3.3"
+s.dependency "Eureka", "~> 5.3.5"
 end
